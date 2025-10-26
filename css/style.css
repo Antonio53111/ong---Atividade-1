@@ -234,3 +234,82 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--space-8);
 }
+#global-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+}
+
+.loading-spinner {
+    text-align: center;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--neutral-200);
+    border-top: 4px solid var(--primary-500);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Form Validation Styles */
+.field-error {
+    color: var(--error);
+    font-size: var(--text-sm);
+    margin-top: var(--space-1);
+    display: none;
+}
+
+.form-control.error {
+    border-color: var(--error);
+    box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.1);
+}
+
+.form-control.success {
+    border-color: var(--success);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+/* SPA Transitions */
+main {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+main.loading {
+    opacity: 0.5;
+}
+
+/* 404 Page */
+.error-page {
+    padding: var(--space-16) 0;
+    text-align: center;
+}
+
+.error-page h1 {
+    font-size: 6rem;
+    font-weight: var(--font-bold);
+    color: var(--neutral-300);
+    margin-bottom: var(--space-4);
+}
+
+.error-page h2 {
+    font-size: var(--text-2xl);
+    color: var(--neutral-700);
+    margin-bottom: var(--space-6);
+}
