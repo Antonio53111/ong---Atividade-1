@@ -5,323 +5,367 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONG Connect - Plataforma para Organizações Não Governamentais</title>
     <meta name="description" content="Plataforma para ONGs gerenciarem atividades, divulgar projetos, captar recursos e engajar voluntários">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
-        }
-        
-        /* Header e Navegação */
-        header {
-            background: #2E8B57;
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo h1 {
-            font-size: 1.8rem;
-        }
-        
-        .logo p {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-        
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        .nav-menu a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        
-        .nav-menu a:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-        
-        .btn-login {
-            background: #FF6B35;
-            color: white;
-            padding: 0.7rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        
-        .btn-login:hover {
-            background: #e55a2b;
-        }
-        
-        /* Conteúdo Principal */
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 20px;
-        }
-        
-        .hero {
-            text-align: center;
-            margin: 3rem 0;
-            padding: 3rem 0;
-        }
-        
-        .hero h2 {
-            color: #2E8B57;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 2rem;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-        
-        .btn-primary {
-            background: #2E8B57;
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            background: #1e6b46;
-        }
-        
-        .btn-secondary {
-            background: #FF6B35;
-            color: white;
-        }
-        
-        .btn-secondary:hover {
-            background: #e55a2b;
-        }
-        
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
-        }
-        
-        .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .feature-card h3 {
-            color: #2E8B57;
-            margin-bottom: 1rem;
-        }
-        
-        /* Quick Links */
-        .quick-links {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 3rem 0;
-            text-align: center;
-        }
-        
-        .quick-links h2 {
-            color: #2E8B57;
-            margin-bottom: 2rem;
-        }
-        
-        .link-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-        }
-        
-        .link-card {
-            background: #f9f9f9;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #333;
-            transition: all 0.3s;
-        }
-        
-        .link-card:hover {
-            background: #2E8B57;
-            color: white;
-            transform: translateY(-2px);
-        }
-        
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-        
-        /* Responsivo */
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .nav-menu {
-                flex-direction: column;
-                gap: 0.5rem;
-                text-align: center;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 200px;
-                text-align: center;
-            }
-        }
-    </style>
+    
+    <!-- NOVOS CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Header com Navegação Completa -->
-    <header>
-        <div class="nav-container">
-            <div class="logo">
-                <h1>ONG Connect</h1>
-                <p>Plataforma para Organizações Não Governamentais</p>
+<body class="app-layout">
+    <!-- Header -->
+    <header class="header navbar">
+        <div class="container nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="nav-logo">
+                🌟 ONG Connect
+            </a>
+
+            <!-- Menu Hamburger (Mobile) -->
+            <div class="hamburger visible-mobile">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+
+            <!-- Menu Principal -->
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="index.html">🏠 Início</a></li>
-                    <li><a href="sobre.html">📖 Sobre</a></li>
-                    <li><a href="projetos.html">🚀 Projetos</a></li>
-                    <li><a href="voluntarios.html">👥 Voluntários</a></li>
-                    <li><a href="contato.html">📞 Contato</a></li>
-                    <li><a href="login.html" class="btn-login">🔐 Login</a></li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">
+                            🏠 Início
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="sobre.html" class="nav-link">
+                            📖 Sobre
+                        </a>
+                        <!-- Submenu Dropdown -->
+                        <ul class="dropdown-menu">
+                            <li><a href="sobre.html#missao" class="nav-link">Nossa Missão</a></li>
+                            <li><a href="sobre.html#valores" class="nav-link">Valores</a></li>
+                            <li><a href="sobre.html#equipe" class="nav-link">Equipe</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="projetos.html" class="nav-link">
+                            🚀 Projetos
+                        </a>
+                        <!-- Submenu Dropdown -->
+                        <ul class="dropdown-menu">
+                            <li><a href="projetos.html?filter=ativos" class="nav-link">Projetos Ativos</a></li>
+                            <li><a href="projetos.html?filter=concluidos" class="nav-link">Projetos Concluídos</a></li>
+                            <li><a href="projetos.html?filter=educacao" class="nav-link">Educação</a></li>
+                            <li><a href="projetos.html?filter=saude" class="nav-link">Saúde</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="voluntarios.html" class="nav-link">
+                            👥 Voluntários
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link">
+                            📞 Contato
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item hidden-mobile">
+                        <a href="login.html" class="btn btn-primary btn-sm">
+                            🔐 Entrar
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
+    <!-- Conteúdo Principal -->
+    <main class="main">
         <!-- Hero Section -->
         <section class="hero">
-            <h2>Bem-vindo à ONG Connect</h2>
-            <p>Conectando ONGs a recursos e voluntários para maximizar o impacto social</p>
-            <div class="hero-buttons">
-                <a href="sobre.html" class="btn btn-primary">Saiba Mais</a>
-                <a href="login.html" class="btn btn-secondary">Fazer Login</a>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Conectando ONGs a Recursos e Voluntários
+                    </h1>
+                    <p class="hero-subtitle">
+                        Uma plataforma completa para organizações não governamentais gerenciarem suas atividades, 
+                        divulgarem projetos e engajarem a comunidade.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="login.html" class="btn btn-primary btn-lg">
+                            🚀 Acessar Plataforma
+                        </a>
+                        <a href="sobre.html" class="btn btn-outline btn-lg">
+                            📖 Saiba Mais
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/600x400/2E8B57/FFFFFF?text=Voluntários+Trabalhando+Juntos" 
+                         alt="Voluntários trabalhando juntos" 
+                         loading="lazy">
+                </div>
             </div>
         </section>
 
-        <!-- Features Grid -->
-        <section class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">📋</div>
-                <h3>Gestão de Projetos</h3>
-                <p>Organize e acompanhe todas as fases dos seus projetos sociais</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">👥</div>
-                <h3>Voluntários</h3>
-                <p>Encontre e gerencie voluntários qualificados</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">💰</div>
-                <h3>Captação de Recursos</h3>
-                <p>Divulgue campanhas e receba doações</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📊</div>
-                <h3>Relatórios</h3>
-                <p>Gerencie o impacto das suas ações</p>
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Como Nossa Plataforma Ajuda Sua ONG</h2>
+                    <p class="section-subtitle">
+                        Ferramentas poderosas para maximizar o impacto social da sua organização
+                    </p>
+                </div>
+
+                <div class="features-grid grid">
+                    <!-- Card 1 -->
+                    <article class="card feature-card">
+                        <div class="card-body">
+                            <div class="feature-icon">📋</div>
+                            <h3 class="card-title">Gestão de Projetos</h3>
+                            <p>Organize e acompanhe todas as fases dos seus projetos sociais de forma eficiente.</p>
+                            <div class="card-footer">
+                                <span class="badge badge-primary">Popular</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card feature-card">
+                        <div class="card-body">
+                            <div class="feature-icon">👥</div>
+                            <h3 class="card-title">Recrutamento de Voluntários</h3>
+                            <p>Encontre e gerencie voluntários qualificados para suas iniciativas.</p>
+                            <div class="card-footer">
+                                <span class="badge badge-success">Novo</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card feature-card">
+                        <div class="card-body">
+                            <div class="feature-icon">💰</div>
+                            <h3 class="card-title">Captação de Recursos</h3>
+                            <p>Divulgue suas campanhas e receba doações de forma transparente.</p>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="card feature-card">
+                        <div class="card-body">
+                            <div class="feature-icon">📊</div>
+                            <h3 class="card-title">Relatórios e Análises</h3>
+                            <p>Gere relatórios detalhados sobre o impacto das suas ações.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <!-- Quick Links -->
-        <section class="quick-links">
-            <h2>Acesse Rapidamente</h2>
-            <div class="link-grid">
-                <a href="sobre.html" class="link-card">
-                    <h3>📖 Sobre</h3>
-                    <p>Conheça nossa missão</p>
-                </a>
-                <a href="projetos.html" class="link-card">
-                    <h3>🚀 Projetos</h3>
-                    <p>Veja nossas iniciativas</p>
-                </a>
-                <a href="voluntarios.html" class="link-card">
-                    <h3>👥 Voluntários</h3>
-                    <p>Junte-se a nós</p>
-                </a>
-                <a href="contato.html" class="link-card">
-                    <h3>📞 Contato</h3>
-                    <p>Fale conosco</p>
-                </a>
+        <!-- Projects Preview -->
+        <section class="projects-preview">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Projetos em Destaque</h2>
+                    <p class="section-subtitle">
+                        Conheça algumas iniciativas que estão transformando vidas
+                    </p>
+                </div>
+
+                <div class="projects-grid grid grid-3">
+                    <!-- Project Card 1 -->
+                    <article class="card project-card">
+                        <img src="https://via.placeholder.com/400x200/FF6B35/FFFFFF?text=Educação+para+Todos" 
+                             alt="Projeto Educação para Todos" 
+                             class="project-image"
+                             loading="lazy">
+                        <div class="project-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Educação para Todos</h3>
+                                <span class="badge badge-success">Ativo</span>
+                            </div>
+                            <div class="card-body">
+                                <p>Oferecemos aulas de reforço escolar para crianças em situação de vulnerabilidade.</p>
+                                <div class="project-meta">
+                                    <span class="tag">📍 São Paulo, SP</span>
+                                    <span class="tag">👥 25 voluntários</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                                <small>75% concluído</small>
+                            </div>
+                            <div class="card-footer">
+                                <a href="projetos.html" class="btn btn-outline btn-sm">Ver Detalhes</a>
+                                <button class="btn btn-ghost btn-sm">❤️ Apoiar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 2 -->
+                    <article class="card project-card">
+                        <img src="https://via.placeholder.com/400x200/2E8B57/FFFFFF?text=Alimentação+Saudável" 
+                             alt="Projeto Alimentação Saudável" 
+                             class="project-image"
+                             loading="lazy">
+                        <div class="project-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Alimentação Saudável</h3>
+                                <span class="badge badge-success">Ativo</span>
+                            </div>
+                            <div class="card-body">
+                                <p>Distribuição de cestas básicas e orientação nutricional para famílias carentes.</p>
+                                <div class="project-meta">
+                                    <span class="tag">📍 Rio de Janeiro, RJ</span>
+                                    <span class="tag">👥 18 voluntários</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 60%"></div>
+                                </div>
+                                <small>60% concluído</small>
+                            </div>
+                            <div class="card-footer">
+                                <a href="projetos.html" class="btn btn-outline btn-sm">Ver Detalhes</a>
+                                <button class="btn btn-ghost btn-sm">❤️ Apoiar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 3 -->
+                    <article class="card project-card">
+                        <img src="https://via.placeholder.com/400x200/4CAF50/FFFFFF?text=Reflorestamento+Urbano" 
+                             alt="Projeto Reflorestamento Urbano" 
+                             class="project-image"
+                             loading="lazy">
+                        <div class="project-content">
+                            <div class="card-header">
+                                <h3 class="card-title">Reflorestamento Urbano</h3>
+                                <span class="badge badge-warning">Concluído</span>
+                            </div>
+                            <div class="card-body">
+                                <p>Plantio de árvores nativas em áreas urbanas degradadas. Mais de 5.000 mudas plantadas.</p>
+                                <div class="project-meta">
+                                    <span class="tag">📍 Belo Horizonte, MG</span>
+                                    <span class="tag">👥 42 voluntários</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 100%"></div>
+                                </div>
+                                <small>100% concluído</small>
+                            </div>
+                            <div class="card-footer">
+                                <a href="projetos.html" class="btn btn-outline btn-sm">Ver Resultados</a>
+                                <button class="btn btn-ghost btn-sm">⭐ Avaliar</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="text-center" style="margin-top: var(--space-12);">
+                    <a href="projetos.html" class="btn btn-primary btn-lg">Ver Todos os Projetos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid grid grid-4">
+                    <div class="stat-card text-center">
+                        <div class="stat-number" data-count="150">0</div>
+                        <div class="stat-label">ONGs Cadastradas</div>
+                    </div>
+                    <div class="stat-card text-center">
+                        <div class="stat-number" data-count="320">0</div>
+                        <div class="stat-label">Projetos Ativos</div>
+                    </div>
+                    <div class="stat-card text-center">
+                        <div class="stat-number" data-count="1250">0</div>
+                        <div class="stat-label">Voluntários</div>
+                    </div>
+                    <div class="stat-card text-center">
+                        <div class="stat-number" data-count="85">0</div>
+                        <div class="stat-label">Cidades Atendidas</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alert Demo -->
+        <section class="container">
+            <div class="alert alert-info">
+                <strong>✨ Nova Funcionalidade!</strong> Agora você pode acompanhar o progresso dos projetos em tempo real.
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2023 ONG Connect. Todos os direitos reservados.</p>
-        <p>Email: contato@ongconnect.org | Telefone: (11) 1234-5678</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content grid grid-4">
+                <div class="footer-section">
+                    <h3>ONG Connect</h3>
+                    <p>Conectando organizações não governamentais a recursos e voluntários para maximizar o impacto social.</p>
+                    <div class="social-links">
+                        <a href="#" class="btn btn-ghost btn-sm" aria-label="Facebook">📘</a>
+                        <a href="#" class="btn btn-ghost btn-sm" aria-label="Instagram">📷</a>
+                        <a href="#" class="btn btn-ghost btn-sm" aria-label="Twitter">🐦</a>
+                        <a href="#" class="btn btn-ghost btn-sm" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Início</a></li>
+                        <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                        <li><a href="projetos.html" class="nav-link">Projetos</a></li>
+                        <li><a href="voluntarios.html" class="nav-link">Voluntários</a></li>
+                        <li><a href="contato.html" class="nav-link">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#" class="nav-link">Blog</a></li>
+                        <li><a href="#" class="nav-link">FAQ</a></li>
+                        <li><a href="#" class="nav-link">Termos de Uso</a></li>
+                        <li><a href="#" class="nav-link">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>📧 contato@ongconnect.org</li>
+                        <li>📞 (11) 1234-5678</li>
+                        <li>📍 Rua das ONGs, 123 - São Paulo, SP</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom text-center">
+                <p>&copy; 2023 ONG Connect. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        console.log("✅ ONG Connect carregada com sucesso!");
-    </script>
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
