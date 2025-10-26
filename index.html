@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG Connect - Plataforma para Organizações Não Governamentais</title>
+    <meta name="description" content="Plataforma para ONGs gerenciarem atividades, divulgar projetos, captar recursos e engajar voluntários">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        /* Header e Navegação */
+        header {
+            background: #2E8B57;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+        }
+        
+        .logo p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-login {
+            background: #FF6B35;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .btn-login:hover {
+            background: #e55a2b;
+        }
+        
+        /* Conteúdo Principal */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 3rem 0;
+        }
+        
+        .hero h2 {
+            color: #2E8B57;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: #2E8B57;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #1e6b46;
+        }
+        
+        .btn-secondary {
+            background: #FF6B35;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #e55a2b;
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            color: #2E8B57;
+            margin-bottom: 1rem;
+        }
+        
+        /* Quick Links */
+        .quick-links {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .quick-links h2 {
+            color: #2E8B57;
+            margin-bottom: 2rem;
+        }
+        
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+        
+        .link-card {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+        }
+        
+        .link-card:hover {
+            background: #2E8B57;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+        
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-menu {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 200px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header com Navegação Completa -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <h1>ONG Connect</h1>
+                <p>Plataforma para Organizações Não Governamentais</p>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">🏠 Início</a></li>
+                    <li><a href="sobre.html">📖 Sobre</a></li>
+                    <li><a href="projetos.html">🚀 Projetos</a></li>
+                    <li><a href="voluntarios.html">👥 Voluntários</a></li>
+                    <li><a href="contato.html">📞 Contato</a></li>
+                    <li><a href="login.html" class="btn-login">🔐 Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Bem-vindo à ONG Connect</h2>
+            <p>Conectando ONGs a recursos e voluntários para maximizar o impacto social</p>
+            <div class="hero-buttons">
+                <a href="sobre.html" class="btn btn-primary">Saiba Mais</a>
+                <a href="login.html" class="btn btn-secondary">Fazer Login</a>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Gestão de Projetos</h3>
+                <p>Organize e acompanhe todas as fases dos seus projetos sociais</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>Voluntários</h3>
+                <p>Encontre e gerencie voluntários qualificados</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Captação de Recursos</h3>
+                <p>Divulgue campanhas e receba doações</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Relatórios</h3>
+                <p>Gerencie o impacto das suas ações</p>
+            </div>
+        </section>
+
+        <!-- Quick Links -->
+        <section class="quick-links">
+            <h2>Acesse Rapidamente</h2>
+            <div class="link-grid">
+                <a href="sobre.html" class="link-card">
+                    <h3>📖 Sobre</h3>
+                    <p>Conheça nossa missão</p>
+                </a>
+                <a href="projetos.html" class="link-card">
+                    <h3>🚀 Projetos</h3>
+                    <p>Veja nossas iniciativas</p>
+                </a>
+                <a href="voluntarios.html" class="link-card">
+                    <h3>👥 Voluntários</h3>
+                    <p>Junte-se a nós</p>
+                </a>
+                <a href="contato.html" class="link-card">
+                    <h3>📞 Contato</h3>
+                    <p>Fale conosco</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 ONG Connect. Todos os direitos reservados.</p>
+        <p>Email: contato@ongconnect.org | Telefone: (11) 1234-5678</p>
+    </footer>
+
+    <script>
+        console.log("✅ ONG Connect carregada com sucesso!");
+    </script>
+</body>
+</html>
