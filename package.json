@@ -1,0 +1,27 @@
+{
+  "name": "ong-connect",
+  "version": "1.0.0",
+  "description": "Plataforma web para ONGs gerenciarem projetos e voluntários",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server src/",
+    "build": "node scripts/build.js",
+    "optimize-images": "node scripts/optimize-images.js",
+    "deploy": "node scripts/deploy.js",
+    "lint:css": "stylelint \"src/css/**/*.css\"",
+    "lint:js": "eslint \"src/js/**/*.js\"",
+    "test:accessibility": "pa11y http://localhost:3000"
+  },
+  "keywords": ["ong", "voluntarios", "projetos", "acessibilidade"],
+  "author": "Seu Nome",
+  "license": "MIT",
+  "devDependencies": {
+    "css-minify": "^2.0.0",
+    "html-minifier": "^4.0.0",
+    "imagemin": "^8.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.0",
+    "live-server": "^1.2.2",
+    "terser": "^5.0.0"
+  }
+}
